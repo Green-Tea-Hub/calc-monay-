@@ -8,9 +8,11 @@
   <title>Cash Con | Monay Converter</title>
 
   <script src="./src/index.js"></script>
+  <link rel="stylesheet" href="./src/index.css">
 </head>
 
 <body>
+  <!--
   <div id="cash-con" class="cash-con">
 
     <label class="cash-con__sum">
@@ -22,18 +24,23 @@
     </label>
 
   </div>
+  -->
+
   <div id="coin" class="coin">
     <div class="coins">
       <div class="coins__list"></div>
       <div class="coins__input-container">
-        <button class="coins__input-more" list_num="0">++ More >></button>
+        <button class="coins__input-more">0</button>
       </div>
     </div>
+
+    <script src="./src/components/Coin/addInCoinsList.js"></script>
+    <script src="./src/components/Coin/createCoinsList.js"></script>
+    <script src="./src/components/Coin/coin.js"></script>
+    <link rel="stylesheet" href="./src/components/Coin/coin.css">
+
   </div>
 
-  <script src="./src/components/Coin/addInCoinsList.js"></script>
-  <script src="./src/components/Coin/createPost_coinsList.js"></script>
-  <script src="./src/components/Coin/main.js"></script>
 </body>
 
 </html>

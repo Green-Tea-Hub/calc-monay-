@@ -5,6 +5,7 @@
   Some functions
   For #coin block
   And some initialization for #coin
+  Add inputs Heandlers
 */
 
 /**
@@ -24,4 +25,5 @@ function get_CoinGecko(res) {
 
 const $Coin = document.getElementById("coin");
 
-createPost_coinsList();
+const input_more = $Coin.querySelector(".coins__input-more");
+input_more.addEventListener("click", createCoinsList, false);

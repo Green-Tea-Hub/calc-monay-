@@ -1,0 +1,19 @@
+.coins__list {
+}
+.coins__list-item .number {
+  width: 10rem;
+}
+.coins__list-item .name,
+.coins__list-item .value {
+  width: calc(100% / 2 - 10rem);
+}
+.coins__input-more {
+  min-width: 7rem;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 20px;
+}
