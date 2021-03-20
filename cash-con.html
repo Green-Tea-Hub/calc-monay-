@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Con | Monay Converter</title>
+
+  <script src="./src/index.js"></script>
+</head>
+
+<body>
+  <div id="cash-con" class="cash-con">
+
+    <label class="cash-con__sum">
+      <input type="number" class="cash-con__sum-input">
+    </label>
+
+    <label class="cash-con__cur">
+      <input type="number" class="cash-con__cur-input">
+    </label>
+
+  </div>
+  <div id="coin" class="coin">
+    <div class="coins">
+      <div class="coins__list"></div>
+      <div class="coins__input-container">
+        <button class="coins__input-more" list_num="0">++ More >></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/components/Coin/addInCoinsList.js"></script>
+  <script src="./src/components/Coin/createPost_coinsList.js"></script>
+  <script src="./src/components/Coin/main.js"></script>
+</body>
+
+</html>
