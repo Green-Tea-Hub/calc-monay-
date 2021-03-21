@@ -26,6 +26,43 @@
   </div>
   -->
 
+  <div class="calc">
+    <div class="calc__box">
+
+      <div class="calc__side">
+        <div class="calc__title">У меня есть</div>
+
+        <div class="calc__switcher js-converter-switcher" data-id="from">
+          <div class="calc__switcher__item js-item">RUR</div>
+          <div class="calc__switcher__item js-item active">USD</div>
+        </div>
+
+        <div class="calc__input_box">
+          <input class="calc__input_box__input js-converter-input" data-reverse="false" type="numb" value="5 000">
+          <div class="calc__input_box__rate js-converter-rate-from">1 USD = 74.139 RUR</div>
+        </div>
+      </div>
+
+      <div class="calc__side">
+        <div class="calc__title">Хочу приобрести</div>
+
+        <div class="calc__switcher js-converter-switcher" data-id="to">
+          <div class="calc__switcher__item js-item active">RUR</div>
+          <div class="calc__switcher__item js-item">USD</div>
+          <div class="calc__switcher__item js-item">EUR</div>
+        </div>
+
+        <div class="calc__input_box">
+          <input class="calc__input_box__input js-converter-input" data-reverse="true" type="numb" value="50">
+          <div class="calc__input_box__rate js-converter-rate-to">1 RUR = 0.0135 USD</div>
+        </div>
+      </div>
+
+      <div class="calc__period js-converter-period">Данные за 2021-03-21 10:23:22 GMT+03:00</div>
+
+    </div>
+  </div>
+
   <div id="coin" class="coin">
     <div class="coins">
       <div class="coins__list"></div>
