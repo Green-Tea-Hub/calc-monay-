@@ -17,10 +17,10 @@ function addInCoinsList(names, db) {
     for (let j = 0; j < names.length; j++) {
       const name = names[j];
       const nSpan = document.createElement("span");
+      nSpan.classList = "coins__list-items";
       nSpan.innerHTML = `
-        <span class="number"> ${1 + i} </span>
-        <span class="name">   ${name.toLocaleUpperCase()} </span>
-        <span class="value">  ${obj[name]} </span>`;
+        <span class="name">${name.toLocaleUpperCase()}</span>
+        <span class="value">${obj[name]}</span>`;
       new_div.appendChild(nSpan);
     }
 
