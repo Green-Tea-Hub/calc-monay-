@@ -3,6 +3,10 @@
 /** .coins__input-more heandler
  */
 async function createCoinsList() {
+  // Disabled Input
+  this.setAttribute("disabled", true);
+
+  this.style.addInCoinsList;
   let coinsList;
   if (sessionStorage.coinsList) {
     coinsList = JSON.parse(sessionStorage.coinsList);
@@ -11,5 +15,9 @@ async function createCoinsList() {
     sessionStorage.coinsList = JSON.stringify(coinsList);
   }
 
+  // Start a Function
   addInCoinsList(["id", "name", "symbol"], coinsList);
+
+  // Enable Input
+  this.removeAttribute("disabled");
 }
