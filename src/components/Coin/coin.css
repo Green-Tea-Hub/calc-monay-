@@ -1,11 +1,20 @@
-.coins__list {
+.coins__list-item {
+  display: flex;
+  justify-content: space-between;
 }
-.coins__list-item .number {
-  width: 10rem;
+.coins__list-items {
+  min-width: calc(100% / 3);
+  padding-left: 2rem;
+  text-align: start;
 }
-.coins__list-item .name,
+.coins__list-item .name {
+  background-color: ivory;
+  color: darkgrey;
+}
+.coins__list-item .name::after {
+  content: " - ";
+}
 .coins__list-item .value {
-  width: calc(100% / 2 - 10rem);
 }
 
 .coins__input-container {
