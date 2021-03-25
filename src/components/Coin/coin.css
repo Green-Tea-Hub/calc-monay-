@@ -1,3 +1,28 @@
+/*
+  In .coins__input-search
+*/
+
+.coins__search {
+  display: flex;
+  justify-content: space-between;
+}
+.coins__search-inputs {
+  display: block;
+
+  font-size: 1.5rem;
+  padding: 0.4rem 0.6rem;
+
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px dashed rgb(190, 190, 190);
+}
+/*
+  In .coins__list
+*/
+
+.coins__list {
+  padding: 1rem 0;
+}
 .coins__list-item {
   display: flex;
   justify-content: space-between;
@@ -10,12 +35,16 @@
 .coins__list-item .name {
   background-color: ivory;
   color: darkgrey;
+  text-transform: uppercase;
 }
 .coins__list-item .name::after {
   content: " - ";
 }
 .coins__list-item .value {
 }
+/*
+  In .coins__input-container
+*/
 
 .coins__input-container {
   display: flex;
