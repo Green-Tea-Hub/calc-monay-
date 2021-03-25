@@ -78,7 +78,11 @@
 
     <div id="coin" class="coin">
       <div class="coins">
-        <div class="coins__search"></div>
+        <div class="coins__search">
+          <input type="text" class="coins__search-inps" placeholder="id" />
+          <input type="text" class="coins__search-inps" placeholder="symbol" />
+          <input type="text" class="coins__search-inps" placeholder="name" />
+        </div>
         <div class="coins__list"></div>
         <div class="coins__input-container">
           <button class="coins__input-more">0</button>
@@ -87,7 +91,6 @@
 
       <script src="./src/components/Coin/list/addCoinsList.js"></script>
 
-      <script src="./src/components/Coin/search/addSearchForDB.js"></script>
       <script src="./src/components/Coin/search/search.js"></script>
 
       <script src="./src/components/Coin/heandlers/createCoinsList.js"></script>
