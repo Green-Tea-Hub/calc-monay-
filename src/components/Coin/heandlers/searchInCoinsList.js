@@ -3,6 +3,7 @@
 async function __searchInCoinsList() {
   const tag = this.placeholder;
 
+  // Check sessionStorage
   let coinsList;
   if (sessionStorage.coinsList) {
     coinsList = JSON.parse(sessionStorage.coinsList);
@@ -50,6 +51,9 @@ async function __searchInCoinsList() {
 }
 
 async function searchInCoinsList() {
+  // Disabled Input
+  this.setAttribute("disabled", true);
+
   // Get Coins List
   let coinsList;
   if (sessionStorage.coinsList) {
@@ -59,26 +63,9 @@ async function searchInCoinsList() {
     sessionStorage.coinsList = JSON.stringify(coinsList);
   }
 
-  // Search func
-  function getSearchId(db, target, tag) {
-    let l = 0; // left
-    let r = db.length - 1; // right
-    let m; // mid
-
-    while (l <= r) {
-      m = Math.round((r - l) / 2) + l;
-
-      // if (~db[m][obj_name].indexOf(target)) return m !!! so heavy
-      if (target === db[m][tag]) return m;
-      else if (target < db[m][tag]) r = m - 1;
-      else l = m + 1;
-    }
-
-    return false;
-  }
-
   const tag = this.placeholder;
 
+  // !!! CHANGE !!!
   // Sort tags
   coinsList = coinsList.sort(function (a, b) {
     if (a[tag] > b[tag]) {
@@ -91,9 +78,11 @@ async function searchInCoinsList() {
     return 0;
   });
 
-  const target = this.value.replace(/ +/g, " ").trim().toLocaleLowerCase();
+  // !!! CHANGE TARGET !!!
+  const target = this.value.replace(/ +/g, " ").trim();
   const search_mass_id = getSearchId(coinsList, target, tag);
 
+  // !!! CHANGE THIS ALL !!!
   if (search_mass_id) {
     const fk_answer = [];
     fk_answer.push(coinsList[search_mass_id]);
@@ -101,12 +90,8 @@ async function searchInCoinsList() {
     $Coin.querySelector(".coins__list").innerHTML = "";
     input_more.innerText = 0;
     addInCoinsList(fk_answer);
-  } else {
-    err("oh shit im sorry\n but this is " + search_mass_id);
-  }
-}
+  } else console.log("Search is " + search_mass_id);
 
-// let cities = [{ id: 121, name: 'г. Урюпинск' }, { id: 122, name: 'г. Париж' }, { id: 123, name: 'г. Москва' }, { id: 124, name: 'г. Штормград' }];
-// let searchTerm = 'г. Москва';
-// let cityId = cities.find(city => city.name === searchTerm).id
-// console.log(cityId);
+  // Enable Input
+  this.removeAttribute("disabled");
+}
