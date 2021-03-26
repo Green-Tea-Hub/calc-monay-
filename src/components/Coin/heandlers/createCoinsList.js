@@ -5,6 +5,7 @@
 async function createCoinsList() {
   // Disabled Input
   this.setAttribute("disabled", true);
+  console.time("Add Coins in list time");
 
   this.style.addInCoinsList;
   let coinsList;
@@ -19,6 +20,7 @@ async function createCoinsList() {
   // addInCoinsList(["id", "name", "symbol"], coinsList);
   addInCoinsList(coinsList);
 
-  // Enable Input
+  // End of Heandler
+  console.timeEnd("Add Coins in list time");
   this.removeAttribute("disabled");
 }
