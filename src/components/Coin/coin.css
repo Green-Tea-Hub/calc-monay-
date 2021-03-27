@@ -71,18 +71,26 @@
   }
   .coins__input-more {
     min-width: 7rem;
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 1rem;
     font-size: 1.2rem;
 
     text-align: center;
-    background-color: rgb(211, 211, 211);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 20px;
+    background-color: #ffffff;
+    /* border-radius: 20px; */
+
+    box-shadow: inset 0rem 0px 0px rgb(56, 56, 56),
+      inset -0rem 0px 0px rgb(56, 56, 56);
+
+    transition: box-shadow 1s ease-in-out;
   }
   .coins__input-more::before {
-    content: "There are ";
+    content: "There are (";
   }
   .coins__input-more::after {
-    content: " Coins";
+    content: ") Coins";
+  }
+  .coins__input-more:hover {
+    box-shadow: inset 15rem 0px 0px rgb(56, 56, 56),
+      inset -15rem 0px 0px rgb(56, 56, 56);
   }
 }
