@@ -1,0 +1,35 @@
+/*
+  Only .calc__boxes
+*/
+
+.calc-boxes {
+  display: flex;
+  justify-content: center;
+
+  padding: 1rem 0;
+  min-height: 30vh;
+}
+/*
+  In .calc__boxes
+*/
+
+.calc__box {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.calc__switcher .calc__switch-input {
+  width: calc(15rem / 2);
+  margin: 0.2rem;
+  font-size: 1.2rem;
+
+  text-transform: uppercase;
+  border-bottom: 1px dashed rgb(190, 190, 190);
+}
+.calc__cash-box .calc__cash-value {
+  width: 15rem;
+  padding: 0.3rem;
+  font-size: 2rem;
+
+  border-radius: 5px;
+  border: 1px solid rgb(190, 190, 190);
+}

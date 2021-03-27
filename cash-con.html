@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cash Con | Monay Converter</title>
+    <link
+      rel="icon"
+      href="https://faviconka.ru/ico/1/faviconka.ru_1_106595.ico"
+      type="image/x-icon"
+    />
 
     <script src="./src/index.js"></script>
     <link rel="stylesheet" href="./src/index.css" />
@@ -12,21 +17,21 @@
 
   <body>
     <div class="calc">
-      <div class="calc__boxes">
+      <div class="calc-boxes">
         <!-- Boxes -->
         <div class="calc__box">
           <div class="calc__switcher">
             <input
               type="text"
               class="calc__switch-input"
-              placeholder="ID"
-              value="bitcoin"
+              placeholder="SYMBOL"
+              value="btc"
             />
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="5000" />
-            <div class="calc__cash-rate">1 USD = 74.139 RUR</div>
+            <input class="calc__cash-value" type="numb" value="5" />
+            <div class="calc__cash-rate"></div>
           </div>
         </div>
 
@@ -35,18 +40,38 @@
             <input
               type="text"
               class="calc__switch-input"
-              placeholder="ID"
-              value="bitcoin"
+              placeholder="SYMBOL"
+              value="eth"
             />
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="5000" />
-            <div class="calc__cash-rate">1 USD = 74.139 RUR</div>
+            <input class="calc__cash-value" type="numb" value="" disabled />
+            <div class="calc__cash-rate"></div>
+          </div>
+        </div>
+
+        <div class="calc__box">
+          <div class="calc__switcher">
+            <input
+              type="text"
+              class="calc__switch-input"
+              placeholder="SYMBOL"
+              value="usd"
+            />
+          </div>
+
+          <div class="calc__cash-box">
+            <input class="calc__cash-value" type="numb" value="" disabled />
+            <div class="calc__cash-rate"></div>
           </div>
         </div>
         <!-- End boxes -->
       </div>
+
+      <div class="calc-info"></div>
+
+      <link rel="stylesheet" href="./src/components/Calc/calc.css" />
     </div>
 
     <div id="coin" class="coin">
