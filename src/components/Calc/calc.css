@@ -10,7 +10,7 @@
   min-height: 30vh;
 }
 /*
-  In .calc__boxes
+  In .calc__box
 */
 
 .calc__box {
@@ -33,4 +33,7 @@
 
   border-radius: 5px;
   border: 1px solid rgb(190, 190, 190); /* hotpink */
+}
+.calc__box:first-child .calc__switch-input {
+  background-color: violet;
 }

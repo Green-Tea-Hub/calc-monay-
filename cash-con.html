@@ -16,7 +16,7 @@
   </head>
 
   <body>
-    <div class="calc">
+    <div id="calc" class="calc">
       <div class="calc-boxes">
         <!-- Boxes -->
         <div class="calc__box">
@@ -46,7 +46,7 @@
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="" disabled />
+            <input class="calc__cash-value" type="numb" value="" />
             <div class="calc__cash-rate"></div>
           </div>
         </div>
@@ -62,7 +62,7 @@
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="" disabled />
+            <input class="calc__cash-value" type="numb" value="" />
             <div class="calc__cash-rate"></div>
           </div>
         </div>
@@ -71,6 +71,7 @@
 
       <div class="calc-info"></div>
 
+      <script defer src="./src/components/Calc/calc.js"></script>
       <link rel="stylesheet" href="./src/components/Calc/calc.css" />
     </div>
 
