@@ -14,9 +14,11 @@ function addInCoinsList(db) {
     const container = document.createElement("div");
     container.classList = "coins__list-item";
 
+    $Coin.querySelector(".coins__list").appendChild(container);
+
     for (var name in names) {
       const span_cont = document.createElement("span");
-      span_cont.classList = "coins__list-items";
+      span_cont.classList = "coins__list-items show-animation ";
       span_cont.innerHTML = `
         <span class="name">${name}</span>
         <span class="value">${names[name]}</span>
@@ -24,9 +26,6 @@ function addInCoinsList(db) {
 
       container.appendChild(span_cont);
     }
-
-    // Add on page container div
-    $Coin.querySelector(".coins__list").appendChild(container);
   }
 
   // Change counter in button
