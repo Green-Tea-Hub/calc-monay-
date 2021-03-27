@@ -4,7 +4,7 @@
 
 .coins__search {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .coins__search-inps {
   display: block;
@@ -27,22 +27,25 @@
 }
 .coins__list-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .coins__list-items {
-  min-width: calc(100% / 3);
-  padding-left: 2rem;
+  width: calc(100% / 4);
+  /* padding-left: 2rem; */
   text-align: start;
 }
 .coins__list-item .name {
   background-color: ivory;
   color: darkgrey;
   text-transform: uppercase;
+  border-radius: 0 100% 100% 0;
 }
 .coins__list-item .name::after {
   content: " - ";
 }
-.coins__list-item .value {
+.coins__list-item:hover .name {
+  color: rgb(255, 255, 255);
+  background-color: rgb(214, 214, 214);
 }
 /*
   In .coins__input-container
