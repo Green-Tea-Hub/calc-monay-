@@ -2,77 +2,87 @@
   In .coins__input-search
 */
 
-.coins__search {
-  display: flex;
-  justify-content: space-evenly;
-}
-.coins__search-inps {
-  display: block;
+@media (min-width: 1200px) {
+  .coins__search {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .coins__search-inps {
+    display: block;
 
-  font-size: 1.5rem;
-  padding: 0.4rem 0.6rem;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.6rem;
 
-  text-align: center;
-  border-bottom: 1px dashed rgb(190, 190, 190);
-}
-.coins__search-inps::placeholder {
-  text-transform: uppercase;
+    text-align: center;
+    border-bottom: 1px dashed rgb(190, 190, 190);
+  }
+  .coins__search-inps::placeholder {
+    text-transform: uppercase;
+  }
 }
 /*
   In .coins__list
 */
 
-.coins__list {
-  padding: 1rem 0;
-}
-.coins__list-item {
-  display: flex;
-  justify-content: space-evenly;
-}
-.coins__list-items {
-  width: calc(100% / 4);
-  /* padding-left: 2rem; */
-  text-align: start;
-}
-.coins__list-item .name {
-  background-color: ivory;
-  color: darkgrey;
-  text-transform: uppercase;
-  border-radius: 0 100% 100% 0;
-}
-.coins__list-item .name::after {
-  content: " - ";
-}
-.coins__list-item:hover .name {
-  color: rgb(255, 255, 255);
-  background-color: rgb(214, 214, 214);
+@media (min-width: 1200px) {
+  .coins__list {
+    padding: 1rem 0;
+  }
+  .coins__list-item {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .coins__list-items {
+    width: calc(100% / 3 - (0.4rem * 3));
+    text-align: start;
+  }
+  .coins__list-item .name,
+  .coins__list-item .value {
+    padding: 0 0.4rem;
+  }
+  .coins__list-item .name {
+    background-color: ivory;
+    color: darkgrey;
+    text-transform: uppercase;
+    border-radius: 0 100% 100% 0;
+    user-select: none;
+  }
+  .coins__list-item .name::after {
+    content: " - ";
+  }
+  .coins__list-item:hover .name {
+    color: rgb(255, 255, 255);
+    background-color: rgb(214, 214, 214);
+  }
 }
 /*
   In .coins__input-container
 */
 
-.coins__input-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
+@media (min-width: 1200px) {
+  .coins__input-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
 
-  height: 5rem;
-  background-color: rgb(56, 56, 56);
-}
-.coins__input-more {
-  min-width: 7rem;
-  padding: 0.4rem 0.6rem;
-  font-size: 1.2rem;
+    height: 5rem;
+    background-color: rgb(56, 56, 56);
+  }
+  .coins__input-more {
+    min-width: 7rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.2rem;
 
-  text-align: center;
-  background-color: rgb(211, 211, 211);
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 20px;
-}
-.coins__input-more::before {
-  content: "There are ";
-}
-.coins__input-more::after {
-  content: " Coins";
+    text-align: center;
+    background-color: rgb(211, 211, 211);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  .coins__input-more::before {
+    content: "There are ";
+  }
+  .coins__input-more::after {
+    content: " Coins";
+  }
 }
