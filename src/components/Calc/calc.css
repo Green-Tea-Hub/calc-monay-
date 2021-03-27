@@ -18,18 +18,19 @@
   padding: 0.5rem 1rem;
 }
 .calc__switcher .calc__switch-input {
-  width: calc(15rem / 2);
-  margin: 0.2rem;
+  width: calc(100% / 2);
+  margin: 0.5rem;
+  padding: 0.2rem;
   font-size: 1.2rem;
 
   text-transform: uppercase;
   border-bottom: 1px dashed rgb(190, 190, 190);
 }
 .calc__cash-box .calc__cash-value {
-  width: 15rem;
+  width: 20rem;
   padding: 0.3rem;
   font-size: 2rem;
 
   border-radius: 5px;
-  border: 1px solid rgb(190, 190, 190);
+  border: 1px solid rgb(190, 190, 190); /* hotpink */
 }
