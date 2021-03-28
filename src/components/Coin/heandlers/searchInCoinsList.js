@@ -19,7 +19,7 @@ async function searchInCoinsList() {
   // Get ID - answer
   const ID = getSearchId(
     sortBit(coinsList, this.placeholder), // Get with tag sorted db
-    this.value.trim(), // Get "target" without " "
+    this.value.toLocaleLowerCase().trim(), // Get "target" without " "
     this.placeholder // Tag ...
   );
 

@@ -10,10 +10,14 @@
 
 const $Calc = document.getElementById("calc");
 
-const switch_inputs = $Calc.querySelectorAll(
-  ".calc__box:first-child .calc__switch-input"
-);
-
+// Add heandler to inputs "switch" coins
+const switch_inputs = $Calc.querySelectorAll(".calc-boxes .calc__switch-input");
 switch_inputs.forEach((input) => {
-  input.addEventListener("change", addTickers_SessStor, false);
+  input.addEventListener("change", changeCalcCoin, false);
+});
+
+// Add heandler to input coins value
+const cash_inputs = $Calc.querySelectorAll(".calc-boxes .calc__cash-value");
+cash_inputs.forEach((input) => {
+  input.addEventListener("change", changeCalcValue, false);
 });

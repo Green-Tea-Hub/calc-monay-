@@ -7,6 +7,9 @@
     display: flex;
     justify-content: space-evenly;
   }
+  .coins__search input {
+    transition: border 0.3s linear;
+  }
   .coins__search-inps {
     display: block;
 
@@ -18,6 +21,9 @@
   }
   .coins__search-inps::placeholder {
     text-transform: uppercase;
+  }
+  .coins__search-inps:focus {
+    border-color: black;
   }
 }
 /*

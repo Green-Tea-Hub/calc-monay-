@@ -25,6 +25,7 @@ async function add_TP_onPage(place) {
 
   const text_block = document.createElement("p");
   text_block.classList = "top-trending__text";
+  text_block.innerHTML = "Top Trending";
 
   top_trending.coins.forEach((coin) => {
     text_block.innerHTML += `
