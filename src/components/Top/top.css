@@ -1,0 +1,35 @@
+/*
+  Only .top-trending 
+*/
+
+.top-trending {
+  width: 100%;
+  overflow-x: hidden;
+
+  background-color: rgb(56, 56, 56);
+  color: darkgrey;
+  text-align: start;
+}
+/*
+  Only .top-trending__text and Animations
+*/
+
+.top-trending__text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear normal infinite;
+}
+.top-trending__text:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+/*
+  In text style blocks
+*/
