@@ -34,6 +34,6 @@
   border-radius: 5px;
   border: 1px solid rgb(190, 190, 190); /* hotpink */
 }
-.calc__box:first-child .calc__switch-input {
+/* .calc__box:first-child .calc__switch-input {
   background-color: violet;
-}
+} */

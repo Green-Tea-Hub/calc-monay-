@@ -103,7 +103,7 @@
   ### Animations ###
 */
 .show-animation {
-  animation: first-show 0.3s 1 ease-in;
+  animation: first-show 0.3s 1 ease;
 }
 
 @keyframes first-show {
