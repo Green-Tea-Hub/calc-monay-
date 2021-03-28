@@ -28,12 +28,15 @@
         <!-- Boxes -->
         <div class="calc__box">
           <div class="calc__switcher">
-            <input
-              type="text"
-              class="calc__switch-input"
-              placeholder="SYMBOL"
-              value="btc"
-            />
+            <label>
+              <span>Id</span>
+              <input
+                type="text"
+                class="calc__switch-input"
+                placeholder="ID"
+                value="bitcoin"
+              />
+            </label>
           </div>
 
           <div class="calc__cash-box">
@@ -44,32 +47,48 @@
 
         <div class="calc__box">
           <div class="calc__switcher">
-            <input
-              type="text"
-              class="calc__switch-input"
-              placeholder="SYMBOL"
-              value="eth"
-            />
+            <label>
+              <span>Symbol</span>
+              <input
+                type="text"
+                class="calc__switch-input"
+                placeholder="SYMBOL"
+                value="eth"
+              />
+            </label>
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="" />
+            <input
+              class="calc__cash-value"
+              type="numb"
+              value="000 000 000 000"
+              disabled
+            />
             <div class="calc__cash-rate"></div>
           </div>
         </div>
 
         <div class="calc__box">
           <div class="calc__switcher">
-            <input
-              type="text"
-              class="calc__switch-input"
-              placeholder="SYMBOL"
-              value="usd"
-            />
+            <label>
+              <span>Symbol</span>
+              <input
+                type="text"
+                class="calc__switch-input"
+                placeholder="SYMBOL"
+                value="usd"
+              />
+            </label>
           </div>
 
           <div class="calc__cash-box">
-            <input class="calc__cash-value" type="numb" value="" />
+            <input
+              class="calc__cash-value"
+              type="numb"
+              value="000 000 000 000"
+              disabled
+            />
             <div class="calc__cash-rate"></div>
           </div>
         </div>
@@ -80,6 +99,8 @@
 
       <script src="./src/components/Calc/heandlers/changeCalcCoin.js"></script>
       <script src="./src/components/Calc/heandlers/changeCalcValue.js"></script>
+
+      <script src="./src/components/Calc/heandlers/changePrice.js"></script>
 
       <script defer src="./src/components/Calc/calc.js"></script>
       <link rel="stylesheet" href="./src/components/Calc/calc.css" />
