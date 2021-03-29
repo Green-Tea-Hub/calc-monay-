@@ -24,7 +24,7 @@
 .top-trending__text {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 60s linear normal infinite;
+  animation: marquee 160s linear normal infinite;
 }
 .top-trending__text:hover {
   animation-play-state: paused;
