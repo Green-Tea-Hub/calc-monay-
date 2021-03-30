@@ -8,13 +8,14 @@ async function changePrice() {
     const othCoin_symbol = clrStr(switch_inputs[i].value);
     const othCoin_inpValue = cash_inputs[i];
 
+    // NEED TOTAL CHENGES ...
     let myCoin_PP;
 
     if (sessionStorage[myCoin_id]) {
       myCoin_PP = JSON.parse(sessionStorage[myCoin_id]);
     } else {
       const answer = await get_CoinGecko(
-        `simple/price?ids=bitcoin&vs_currencies=eth%2Cdkk%2Cusd%2Cbtc`
+        `simple/price?ids=${myCoin_id}&vs_currencies=eth%2Cdkk%2Cusd%2Cbtc`
       );
       sessionStorage[myCoin_id] = JSON.stringify(answer[myCoin_id]);
 
