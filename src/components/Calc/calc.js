@@ -21,3 +21,5 @@ switch_inputs[0].addEventListener("change", changeCalcCoin, false);
 // Add heandler to input coins value
 const cash_inputs = $Calc.querySelectorAll(".calc-boxes .calc__cash-value");
 cash_inputs[0].addEventListener("change", changeCalcValue, false);
+
+const cc_rate_divs = $Calc.querySelectorAll(".calc__cash-rate");
