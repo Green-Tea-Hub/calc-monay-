@@ -11,12 +11,14 @@ async function changePrice() {
     let myCoin_PP;
 
     if (sessionStorage[myCoin_id]) {
-      myCoin_PP = JSON.parse(sessionStorage[myCoin_id])[myCoin_id];
+      myCoin_PP = JSON.parse(sessionStorage[myCoin_id]);
     } else {
-      myCoin_PP = await get_CoinGecko(
+      const answer = await get_CoinGecko(
         `simple/price?ids=bitcoin&vs_currencies=eth%2Cdkk%2Cusd%2Cbtc`
       );
-      sessionStorage[myCoin_id] = JSON.stringify(coin_PP);
+      sessionStorage[myCoin_id] = JSON.stringify(answer[myCoin_id]);
+
+      myCoin_PP = JSON.parse(sessionStorage[myCoin_id]);
     }
 
     const ctc = myCoin_PP[othCoin_symbol];
