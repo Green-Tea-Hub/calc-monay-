@@ -1,23 +1,25 @@
 "use strict";
 
-function changePrice() {
-  const coin_id = switch_inputs[0];
-  const coin_1_sym = switch_inputs[1];
-  const coin_2_sym = switch_inputs[2];
+async function changePrice() {
+  const myCoin_id = clrStr(switch_inputs[0].value);
+  const myCoin_inpValue = cash_inputs[0];
 
-  const coin_value = cash_inputs[0];
-  const coin_1_val = cash_inputs[1];
-  const coin_2_val = cash_inputs[2];
+  for (let i = 1; i < switch_inputs.length && i < cash_inputs.length; i++) {
+    const othCoin_symbol = clrStr(switch_inputs[i].value);
+    const othCoin_inpValue = cash_inputs[i];
 
-  const coins_price = JSON.parse(
-    sessionStorage[coin_id.value.toLocaleLowerCase().trim()]
-  )[coin_id.value.toLocaleLowerCase().trim()];
+    let myCoin_PP;
 
-  const ctc_1 = coins_price[coin_1_sym.value.toLocaleLowerCase().trim()];
-  const ctc_2 = coins_price[coin_2_sym.value.toLocaleLowerCase().trim()];
+    if (sessionStorage[myCoin_id]) {
+      myCoin_PP = JSON.parse(sessionStorage[myCoin_id])[myCoin_id];
+    } else {
+      myCoin_PP = await get_CoinGecko(
+        `simple/price?ids=bitcoin&vs_currencies=eth%2Cdkk%2Cusd%2Cbtc`
+      );
+      sessionStorage[myCoin_id] = JSON.stringify(coin_PP);
+    }
 
-  coin_1_val.value = coin_value.value * ctc_1;
-  coin_2_val.value = coin_value.value * ctc_2;
-
-  // console.log(coin_symbol_price);
+    const ctc = myCoin_PP[othCoin_symbol];
+    othCoin_inpValue.value = myCoin_inpValue.value * ctc;
+  }
 }
