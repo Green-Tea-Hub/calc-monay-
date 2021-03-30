@@ -14,15 +14,18 @@ async function changePrice() {
     if (sessionStorage[myCoin_id]) {
       myCoin_PP = JSON.parse(sessionStorage[myCoin_id]);
     } else {
-      const answer = await get_CoinGecko(
-        `simple/price?ids=${myCoin_id}&vs_currencies=eth%2Cdkk%2Cusd%2Cbtc`
-      );
-      sessionStorage[myCoin_id] = JSON.stringify(answer[myCoin_id]);
+      const sy_mass = [];
+      switch_inputs.forEach((input) => sy_mass.push(clrStr(input.value)));
 
+      const resp = `${myCoin_id}&vs_currencies=${sy_mass.join("%2C")}`;
+      const answer = await get_CoinGecko("simple/price?ids=" + resp);
+
+      sessionStorage[myCoin_id] = JSON.stringify(answer[myCoin_id]);
       myCoin_PP = JSON.parse(sessionStorage[myCoin_id]);
     }
 
     const ctc = myCoin_PP[othCoin_symbol];
     othCoin_inpValue.value = myCoin_inpValue.value * ctc;
+    cc_rate_divs[i].innerText = ctc;
   }
 }
