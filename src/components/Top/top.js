@@ -10,38 +10,27 @@
 
 const $Top = document.getElementById("top");
 
-async function add_TP_onPage(place) {
+(async (place) => {
   console.time("Add Top Trending");
-
-  let top_trending;
-  if (sessionStorage.top_trending) {
-    top_trending = JSON.parse(sessionStorage.top_trending);
-  } else {
-    top_trending = await get_CoinGecko("search/trending");
-    sessionStorage.top_trending = JSON.stringify(top_trending);
+  // Get/ save coins
+  let top_trending_coins;
+  if (sessionStorage.top_trending_coins)
+    top_trending_coins = JSON.parse(sessionStorage.top_trending_coins);
+  else {
+    top_trending_coins = await get_CoinGecko("search/trending");
+    sessionStorage.top_trending_coins = JSON.stringify(top_trending_coins);
   }
 
-  if (!top_trending) return;
-
-  const text_block = document.createElement("p");
-  text_block.classList = "top-trending__text";
-  text_block.innerHTML = "Top Trending";
-
-  top_trending.coins.forEach((coin) => {
-    text_block.innerHTML += `
-      |
-      Market cap rank
-      ${coin.item.name}
-      <img src="${coin.item.thumb}" alt="${coin.item.symbol}">
-      (<b>${coin.item.symbol}</b>):
-      ${coin.item.market_cap_rank}
-      |
-    `;
+  // Create text container
+  const txt_p = document.createElement("p");
+  txt_p.classList = "top-trending__text";
+  txt_p.innerHTML = "Top Trending (Market cap rank)";
+  top_trending_coins.coins.forEach((coin) => {
+    const span = document.createElement("span");
+    span.innerHTML = `| ${coin.item.name} <img src="${coin.item.thumb}" alt="${coin.item.symbol}"> (<b>${coin.item.symbol}</b>): ${coin.item.market_cap_rank} |`;
+    txt_p.appendChild(span);
   });
 
-  place.appendChild(text_block);
-
+  place.appendChild(txt_p);
   console.timeEnd("Add Top Trending");
-}
-
-add_TP_onPage($Top.querySelector(".top-trending"));
+})($Top.querySelector(".top-trending"));
