@@ -30,7 +30,7 @@ async function changePrice() {
     }
 
     const ctc = mainCoin_PricePlan[otherCoin_symbol]; // Get price coin to coin
-    otherCoin_val_inp.value = mainCoin_value * ctc; // Add all information on page
+    otherCoin_val_inp.value = (mainCoin_value * ctc).toFixed(2); // Add all information on page
     cc_rate_divs[i].innerText = `${mainCoin_id} - ${ctc}`;
   }
 }
