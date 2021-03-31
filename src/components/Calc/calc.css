@@ -21,6 +21,16 @@
 .calc__box input {
   transition: border 0.3s linear;
 }
+.calc__box input:disabled {
+  color: rgb(88, 88, 88);
+}
+/* text in labels before inputs */
+.calc__box label > span {
+  background-color: ivory;
+  color: darkgrey;
+  text-transform: uppercase;
+}
+/* calc__switcher */
 .calc__switch-input {
   width: calc(100% / 2);
   margin: 0.5rem;
@@ -33,6 +43,7 @@
 .calc__switch-input:focus {
   border-color: black;
 }
+/* .calc__cash-box */
 .calc__cash-value {
   width: 20rem;
   padding: 0.3rem;
@@ -43,6 +54,13 @@
 }
 .calc__cash-value:focus {
   border-color: black;
+}
+.calc__cash-rate {
+  font-size: 0.9rem;
+  padding-left: 5%;
+  background-color: ivory;
+  color: darkgrey;
+  text-transform: uppercase;
 }
 /* .calc__box:first-child .calc__switch-input {
   background-color: violet;
