@@ -1,5 +1,5 @@
 /*
-  Only .calc__boxes
+  Only .calc-boxes
 */
 
 .calc-boxes {
@@ -10,41 +10,32 @@
   min-height: 30vh;
 }
 /*
-  In .calc__box
+  In .calc-box
 */
 
-.calc__box {
+.calc-box {
   margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
 }
-/* inputs */
-.calc__box input {
+
+.calc-box__coin-select,
+.calc-box__coin-value {
   transition: border 0.3s linear;
 }
-.calc__box input:disabled {
-  color: rgb(88, 88, 88);
-}
-/* text in labels before inputs */
-.calc__box label > span {
-  background-color: ivory;
-  color: darkgrey;
-  text-transform: uppercase;
-}
+
 /* calc__switcher */
-.calc__switch-input {
-  width: calc(100% / 2);
+.calc-box__coin-select {
+  width: calc(100% - ((0.5rem + 0.2rem) * 2));
   margin: 0.5rem;
   padding: 0.2rem;
   font-size: 1.2rem;
-
-  text-transform: uppercase;
   border-bottom: 1px dashed rgb(190, 190, 190);
 }
-.calc__switch-input:focus {
+.calc-box__coin-select:focus {
   border-color: black;
 }
 /* .calc__cash-box */
-.calc__cash-value {
+.calc-box__coin-value {
   width: 20rem;
   padding: 0.3rem;
   font-size: 2rem;
@@ -52,16 +43,20 @@
   border-radius: 5px;
   border: 1px solid rgb(190, 190, 190); /* hotpink */
 }
-.calc__cash-value:focus {
+.calc-box__coin-value:focus {
   border-color: black;
 }
-.calc__cash-rate {
+.calc-box__coin-value:disabled {
+  color: rgb(88, 88, 88);
+}
+
+.calc-box__coin-rate {
   font-size: 0.9rem;
   padding-left: 5%;
   background-color: ivory;
   color: darkgrey;
   text-transform: uppercase;
 }
-/* .calc__box:first-child .calc__switch-input {
+/* .calc-box:first-child .calc__switch-input {
   background-color: violet;
 } */
