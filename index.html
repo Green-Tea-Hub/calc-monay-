@@ -18,14 +18,14 @@
   <body>
     <div id="top" class="top">
       <div class="top-trending">
-        <script async src="./src/components/Top/top.js"></script>
-        <link rel="stylesheet" href="./src/components/Top/top.css" />
+        <!-- Main -->
+        <script async src="./src/components/Top/main.js"></script>
+        <link rel="stylesheet" href="./src/components/Top/main.css" />
       </div>
     </div>
-
     <div id="calc" class="calc">
       <div class="calc-boxes">
-        <!-- Boxes -->
+        <!-- 3 Boxes -->
         <div class="calc__box">
           <div class="calc__switcher">
             <label>
@@ -38,7 +38,6 @@
               />
             </label>
           </div>
-
           <div class="calc__cash-box">
             <input class="calc__cash-value" type="numb" value="0.1" />
             <div class="calc__cash-rate"></div>
@@ -57,7 +56,6 @@
               />
             </label>
           </div>
-
           <div class="calc__cash-box">
             <input
               class="calc__cash-value"
@@ -81,7 +79,6 @@
               />
             </label>
           </div>
-
           <div class="calc__cash-box">
             <input
               class="calc__cash-value"
@@ -92,19 +89,18 @@
             <div class="calc__cash-rate"></div>
           </div>
         </div>
-        <!-- End boxes -->
+        <!-- 3 End boxes -->
       </div>
-
       <div class="calc-info"></div>
-
+      <!-- Heandlers -->
       <script src="./src/components/Calc/heandlers/changeCalcCoin.js"></script>
       <script src="./src/components/Calc/heandlers/changeCalcValue.js"></script>
-
-      <script src="./src/components/Calc/changePrice.js"></script>
-      <script src="./src/components/Calc/calc.js"></script>
-      <link rel="stylesheet" href="./src/components/Calc/calc.css" />
+      <!-- Change -->
+      <script src="./src/components/Calc/change/changePrice.js"></script>
+      <!-- Main -->
+      <script src="./src/components/Calc/main.js"></script>
+      <link rel="stylesheet" href="./src/components/Calc/main.css" />
     </div>
-
     <div id="coin" class="coin">
       <div class="coins">
         <!-- Search -->
@@ -119,16 +115,17 @@
           <button class="coins__input-more">0</button>
         </div>
       </div>
-
-      <script src="./src/components/Coin/list/addCoinsList.js"></script>
-
-      <script src="./src/components/Coin/search/search.js"></script>
-
+      <!-- Heandlers -->
       <script src="./src/components/Coin/heandlers/createCoinsList.js"></script>
       <script src="./src/components/Coin/heandlers/searchInCoinsList.js"></script>
-
-      <script defer src="./src/components/Coin/coin.js"></script>
-      <link rel="stylesheet" href="./src/components/Coin/coin.css" />
+      <!-- List -->
+      <script src="./src/components/Coin/list/addCoinsList.js"></script>
+      <!-- Sort & Search -->
+      <script src="./src/components/Coin/sort_search/getSortBit.js"></script>
+      <script src="./src/components/Coin/sort_search/getSearchIndex.js"></script>
+      <!-- Main -->
+      <script defer src="./src/components/Coin/main.js"></script>
+      <link rel="stylesheet" href="./src/components/Coin/main.css" />
     </div>
   </body>
 </html>
