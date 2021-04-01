@@ -10,14 +10,17 @@
 
 const $Calc = document.getElementById("calc");
 
-// Add heandler to inputs "switch" coins
-const switch_inputs = $Calc.querySelectorAll(".calc__switch-input");
-switch_inputs[0].addEventListener("change", changeCalcCoin, false);
+// Add heandlers
+const coin_selectors = $Calc.querySelectorAll(".calc-box__coin-select");
+coin_selectors.forEach((selector) => {
+  addOptionInSelector(selector);
+  selector.addEventListener("change", changeCalcCoin, false);
+});
 
-// Add heandler to input coins value
-const cash_inputs = $Calc.querySelectorAll(".calc__cash-value");
-cash_inputs[0].addEventListener("change", changeCalcValue, false);
+const coinValue_inputs = $Calc.querySelectorAll(".calc-box__coin-value");
+coinValue_inputs[0].addEventListener("change", changeCalcValue, false);
 
-const cc_rate_divs = $Calc.querySelectorAll(".calc__cash-rate");
+// Just get coin div ...
+const coinRate_divs = $Calc.querySelectorAll(".calc-box__coin-rate");
 
-changePrice();
+// changePrice();
