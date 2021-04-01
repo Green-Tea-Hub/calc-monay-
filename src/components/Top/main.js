@@ -33,4 +33,4 @@ const $Top = document.getElementById("top");
 
   place.appendChild(txt_p);
   console.timeEnd("Add Top Trending");
-})($Top.querySelector(".top-trending"));
+})($Top.querySelector(".top__trending"));
