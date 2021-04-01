@@ -6,10 +6,10 @@
   min-height: 2rem;
 }
 /*
-  Only .top-trending 
+  Only .top__trending 
 */
 
-.top-trending {
+.top__trending {
   width: 100%;
   overflow-x: hidden;
 
@@ -18,15 +18,15 @@
   text-align: start;
 }
 /*
-  Only .top-trending__text and Animations
+  Only .top__trending__text and Animations
 */
 
-.top-trending__text {
+.top__trending-text {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 160s linear normal infinite;
 }
-.top-trending__text:hover {
+.top__trending-text:hover {
   animation-play-state: paused;
 }
 @keyframes marquee {
@@ -41,7 +41,7 @@
   In text style blocks
 */
 
-.top-trending__text img {
+.top__trending-text img {
   user-select: none;
   max-height: 0.7rem;
   padding-top: 0.2rem;

@@ -3,26 +3,24 @@
 */
 
 @media (min-width: 1200px) {
-  .coins__search {
+  .coins__search-inputs {
     display: flex;
     justify-content: space-evenly;
   }
-  .coins__search input {
-    transition: border 0.3s linear;
-  }
-  .coins__search-inps {
+  .coins__search-input {
     display: block;
 
     font-size: 1.5rem;
     padding: 0.4rem 0.6rem;
+    transition: border 0.3s linear;
 
     text-align: center;
     border-bottom: 1px dashed rgb(190, 190, 190);
   }
-  .coins__search-inps::placeholder {
+  .coins__search-input::placeholder {
     text-transform: uppercase;
   }
-  .coins__search-inps:focus {
+  .coins__search-input:focus {
     border-color: black;
   }
 }
