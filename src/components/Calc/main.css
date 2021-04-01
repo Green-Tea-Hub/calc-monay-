@@ -22,19 +22,21 @@
 .calc-box__coin-value {
   transition: border 0.3s linear;
 }
-
 /* calc__switcher */
+
 .calc-box__coin-select {
   width: calc(100% - ((0.5rem + 0.2rem) * 2));
   margin: 0.5rem;
   padding: 0.2rem;
   font-size: 1.2rem;
+  background-color: #00000000;
   border-bottom: 1px dashed rgb(190, 190, 190);
 }
 .calc-box__coin-select:focus {
   border-color: black;
 }
 /* .calc__cash-box */
+
 .calc-box__coin-value {
   width: 20rem;
   padding: 0.3rem;
