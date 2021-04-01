@@ -21,6 +21,3 @@ function get_CoinGecko(res) {
     .then((response) => response.json())
     .catch((error) => err(error + "\nResponse: " + res));
 }
-// ["ping", "events"].forEach(async (res) =>
-//   console.log(await get_CoinGecko(res))
-// );

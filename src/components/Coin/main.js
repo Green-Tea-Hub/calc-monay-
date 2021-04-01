@@ -8,25 +8,6 @@
   Add inputs Heandlers
 */
 
-/**
- * const a = sortBit([{tag},{tag},{tag}], tag);
- * @param {Array} db
- * @param {String} tag or symbol
- * @returns Array
- */
-function sortBit(db, tag) {
-  return db.sort(function (a, b) {
-    if (a[tag] > b[tag]) {
-      return 1;
-    }
-    if (a[tag] < b[tag]) {
-      return -1;
-    }
-    // a должно быть равным b
-    return 0;
-  });
-}
-
 const $Coin = document.getElementById("coin");
 
 // Add heandler to input "More" coins
