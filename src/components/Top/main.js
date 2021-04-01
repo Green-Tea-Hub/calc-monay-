@@ -23,7 +23,7 @@ const $Top = document.getElementById("top");
 
   // Create text container
   const txt_p = document.createElement("p");
-  txt_p.classList = "top-trending__text";
+  txt_p.classList = "top__trending-text";
   txt_p.innerHTML = "Top Trending (Market cap rank)";
   top_trending_coins.coins.forEach((coin) => {
     const span = document.createElement("span");
