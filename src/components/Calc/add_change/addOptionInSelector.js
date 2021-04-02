@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- *
+ * addOptionsInSelector(input, arrayOfOptions)
  * @param {Object HTML} selector
  * @param {Array} options
  */

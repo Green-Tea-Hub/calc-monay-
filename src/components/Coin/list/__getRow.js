@@ -15,8 +15,8 @@ function __getRow(object) {
     span_cont.classList = "coins__list-items show-animation ";
     span_cont.innerHTML = `<span class="name">${name}</span>
                            <span class="value">${object[name]}</span>`;
-
     container.appendChild(span_cont);
   }
+
   return container; // Return "row" object html
 }

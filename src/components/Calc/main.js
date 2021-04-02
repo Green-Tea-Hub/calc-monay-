@@ -30,8 +30,9 @@ coin_selectors.forEach((selector) => {
       },
     ],
   };
-  addOptionsInSelector(selector, options);
-  selector.addEventListener("change", changeCalcCoin, false);
+
+  addOptionsInSelector(selector, options); // Add options in selector
+  selector.addEventListener("change", changeCalcCoin, false); // Add Heandler
 });
 
 const coinValue_inputs = $Calc.querySelectorAll(".calc-box__coin-value");
