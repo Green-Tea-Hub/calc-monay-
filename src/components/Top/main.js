@@ -11,7 +11,6 @@
 const $Top = document.getElementById("top");
 
 (async (place) => {
-  console.time("Add Top Trending");
   // Get/ save coins
   let top_trending_coins;
   if (sessionStorage.top_trending_coins)
@@ -32,5 +31,4 @@ const $Top = document.getElementById("top");
   });
 
   place.appendChild(txt_p);
-  console.timeEnd("Add Top Trending");
 })($Top.querySelector(".top__trending"));

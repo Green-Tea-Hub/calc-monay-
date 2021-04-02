@@ -1,31 +1,21 @@
-function addOptionInSelector(selector) {
-  const coins = [
-    { id: "bitcoin", symbol: "btc", name: "Bitcoin" },
-    { id: "ethereum", symbol: "eth", name: "Ethereum" },
-    { id: "ripple", symbol: "xrp", name: "XRP" },
-    { id: "litecoin", symbol: "ltc", name: "Litecoin" },
-    { id: "bitcoin", symbol: "btc", name: "Bitcoin" },
-    { id: "ethereum", symbol: "eth", name: "Ethereum" },
-  ];
-  const currencies = [
-    {
-      id: "uniswap-state-dollar",
-      symbol: "usd",
-      name: "unified Stable Dollar",
-    },
-  ];
+"use strict";
 
-  if (selector.name == "id") {
-    const g_coins = getOptionsGroup(coins, "id", "name", "coins");
-    const g_curr = getOptionsGroup(currencies, "id", "name", "currencies");
+/**
+ *
+ * @param {Object HTML} selector
+ * @param {Array} options
+ */
+function addOptionsInSelector(selector, options) {
+  for (var option in options) {
+    const a = getOptionsGroup(options[option], selector.name, "name", option); // Send this coins and get optgroup with him
+    selector.appendChild(a); // Add in selector
 
-    selector.appendChild(g_coins);
-    selector.appendChild(g_curr);
-  } else if (selector.name == "symbol") {
-    const g_coins = getOptionsGroup(coins, "symbol", "name", "coins");
-    const g_curr = getOptionsGroup(currencies, "symbol", "name", "currencies");
-
-    selector.appendChild(g_coins);
-    selector.appendChild(g_curr);
+    // if (selector.name == "id") {
+    //   const a = getOptionsGroup(options[option], "id", "name", option); // Send this coins and get optgroup with him
+    //   selector.appendChild(a); // Add in selector
+    // } else if (selector.name == "symbol") {
+    //   const a = getOptionsGroup(options[option], "symbol", "name", option);
+    //   selector.appendChild(a);
+    // }
   }
 }
