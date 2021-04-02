@@ -3,12 +3,9 @@
 /** .coins__search-inps heandler
  */
 async function searchInCoinsList() {
-  // Disabled Input and Start timer
-  this.setAttribute("disabled", true);
-  console.time("Search coin time");
+  this.setAttribute("disabled", true); // Disabled Input
 
-  // Get Coins List
-  let coinsList;
+  let coinsList; // Need get "db"
   if (sessionStorage.coinsList) {
     coinsList = JSON.parse(sessionStorage.coinsList);
   } else {
@@ -16,7 +13,6 @@ async function searchInCoinsList() {
     sessionStorage.coinsList = JSON.stringify(coinsList);
   }
 
-  // Get ID - answer
   const ID = getSearchIndex(
     sortBit(coinsList, this.placeholder), // Get with tag sorted db
     this.value.toLocaleLowerCase().trim(), // Get "target" without " "
@@ -24,12 +20,7 @@ async function searchInCoinsList() {
   );
 
   $Coin.querySelector(".coins__list").innerHTML = "";
-  input_more.innerText = 0;
+  input_more.innerText = addInCoinsList([coinsList[ID]]);
 
-  // Send "DB" and create list with answer of search
-  addInCoinsList([coinsList[ID]]);
-
-  // End of Heandler
-  console.timeEnd("Search coin time");
-  this.removeAttribute("disabled");
+  this.removeAttribute("disabled"); // Enable input
 }

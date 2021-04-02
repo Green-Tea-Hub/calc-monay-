@@ -1,33 +1,17 @@
 "use strict";
 
 /**
- * addInCoinsList([{},{},{}])
+ *
  * @param {Array} db
+ * @param {Number} counter
+ * @param {Number} step
+ * @returns Number
  */
-function addInCoinsList(db) {
-  // Start & end (inp counter):
-  let i = +input_more.innerText;
-  let end = i + 100;
+function addInCoinsList(db, counter = 0, step = 50) {
+  let end = counter + step; // Make and number
 
-  for (; i < end && i < db.length; i++) {
-    const names = db[i];
-    const container = document.createElement("div");
-    container.classList = "coins__list-item";
+  for (; counter < end && counter < db.length; counter++)
+    $Coin.querySelector(".coins__list").appendChild(__getRow(db[counter])); // Add in .coins__list rows
 
-    $Coin.querySelector(".coins__list").appendChild(container);
-
-    for (var name in names) {
-      const span_cont = document.createElement("span");
-      span_cont.classList = "coins__list-items show-animation ";
-      span_cont.innerHTML = `
-        <span class="name">${name}</span>
-        <span class="value">${names[name]}</span>
-      `;
-
-      container.appendChild(span_cont);
-    }
-  }
-
-  // Change counter in button
-  input_more.innerText = i;
+  return counter;
 }

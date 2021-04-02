@@ -3,12 +3,9 @@
 /** .coins__input-more heandler
  */
 async function createCoinsList() {
-  // Disabled Input
-  this.setAttribute("disabled", true);
-  console.time("Add Coins in list time");
+  this.setAttribute("disabled", true); // Disabled Input
 
-  this.style.addInCoinsList;
-  let coinsList;
+  let coinsList; // Need get "db"
   if (sessionStorage.coinsList) {
     coinsList = JSON.parse(sessionStorage.coinsList);
   } else {
@@ -16,11 +13,8 @@ async function createCoinsList() {
     sessionStorage.coinsList = JSON.stringify(coinsList);
   }
 
-  // Start a Function
-  // addInCoinsList(["id", "name", "symbol"], coinsList);
-  addInCoinsList(coinsList);
+  const counter = +input_more.innerText; // Make counter
+  input_more.innerText = addInCoinsList(coinsList, counter, 100); // send db, start-number, end-number; Return counter
 
-  // End of Heandler
-  console.timeEnd("Add Coins in list time");
-  this.removeAttribute("disabled");
+  this.removeAttribute("disabled"); // Enable input
 }
