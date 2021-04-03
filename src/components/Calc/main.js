@@ -35,8 +35,8 @@ coin_selectors.forEach((selector) => {
   selector.addEventListener("change", changeCalcCoin, false); // Add Heandler
 });
 
-const coinValue_inputs = $Calc.querySelectorAll(".calc-box__coin-value");
-coinValue_inputs[0].addEventListener("change", changeCalcValue, false);
+const coin_valueInputs = $Calc.querySelectorAll(".calc-box__coin-value");
+coin_valueInputs[0].addEventListener("change", changeCalcValue, false);
 
 // Just get coin div ...
 const coinRate_divs = $Calc.querySelectorAll(".calc-box__coin-rate");
