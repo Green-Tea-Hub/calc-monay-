@@ -10,10 +10,8 @@
 
 const $Calc = document.getElementById("calc");
 
-// Add heandlers
-const coin_selectors = $Calc.querySelectorAll(".calc-box__coin-select");
-coin_selectors.forEach((selector) => {
-  const options = {
+(() => {
+  const options_coinsANDcurrencies = {
     coins: [
       { id: "bitcoin", symbol: "btc", name: "Bitcoin" },
       { id: "ethereum", symbol: "eth", name: "Ethereum" },
@@ -31,14 +29,15 @@ coin_selectors.forEach((selector) => {
     ],
   };
 
-  addOptionsInSelector(selector, options); // Add options in selector
-  selector.addEventListener("change", changeCalcCoin, false); // Add Heandler
-});
+  // heandlers
+  const selects = $Calc.querySelectorAll(".calc-box__coin-select");
+  selects.forEach((selector) => {
+    addOptionsInSelector(selector, options_coinsANDcurrencies); // Add options in selector
+    selector.addEventListener("change", changeCalcCoin, false); // Add Heandler
+  });
 
-const coin_valueInputs = $Calc.querySelectorAll(".calc-box__coin-value");
-coin_valueInputs[0].addEventListener("change", changeCalcValue, false);
-
-// Just get coin div ...
-const coinRate_divs = $Calc.querySelectorAll(".calc-box__coin-rate");
-
-// changePrice();
+  const numbers = $Calc.querySelectorAll(".calc-box__coin-value");
+  numbers.forEach((input) =>
+    input.addEventListener("change", changeCalcValue, false)
+  );
+})();
