@@ -20,7 +20,8 @@
   .coins__search-input::placeholder {
     text-transform: uppercase;
   }
-  .coins__search-input:focus {
+  .coins__search-input:focus,
+  .coins__search-input:hover {
     border-color: black;
   }
 }
