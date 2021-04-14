@@ -88,7 +88,7 @@
     /* text-shadow: 0 2px 0 white; */
 
     transition: box-shadow 0.65s ease-in-out, color 0.65s ease-in-out,
-      border-radius 0.15s ease-in-out;
+      border-radius 0.15s ease-in-out, opacity 0.65s ease-in;
   }
   .coins__input-more::before {
     content: "There are (";
@@ -101,6 +101,9 @@
     color: white;
     box-shadow: inset 15rem 0px 0px rgb(56, 56, 56),
       inset -15rem 0px 0px rgb(56, 56, 56);
+  }
+  .coins__input-more:disabled {
+    opacity: 0;
   }
 }
 
