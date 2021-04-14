@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <script>
+      mocha.setup("bdd");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <script>
+      var assert = chai.assert;
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <!-- INDEX -->
+      <!-- get_CoinGecko -->
+      <script src="../src/index.js"></script>
+
+      <!-- CALC -->
+      <!-- changePrice -->
+      <script src="./src/components/Calc/heandlers/changeCalcWithCoins.js"></script>
+      <!-- addOptionInSelector -->
+      <script src="./src/components/Calc/add_change/addOptionInSelector.js"></script>
+      <!-- getOptionsGroup -->
+      <script src="./src/components/Calc/add_change/getOptionsGroup.js"></script>
+      <!-- getSimplePrice -->
+      <script src="./src/components/Calc/add_change/getSimplePrice.js"></script>
+
+      <!-- COIN -->
+      <!-- createCoinsList -->
+      <script src="./src/components/Coin/heandlers/createCoinsList.js"></script>
+      <!-- searchInCoinsList -->
+      <script src="./src/components/Coin/heandlers/searchInCoinsList.js"></script>
+      <!-- __getRow -->
+      <script src="./src/components/Coin/list/__getRow.js"></script>
+      <!-- addCoinsList -->
+      <script src="./src/components/Coin/list/addCoinsList.js"></script>
+      <!-- getSortBit -->
+      <script src="./src/components/Coin/sort_search/getSortBit.js"></script>
+      <!-- getSearchIndex -->
+      <script src="./src/components/Coin/sort_search/getSearchIndex.js"></script>
+    </header>
+
+    <main>
+      <script src="tests.js"></script>
+      <div id="mocha"></div>
+      <script>
+        mocha.run();
+      </script>
+    </main>
+  </body>
+</html>
