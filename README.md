@@ -26,3 +26,4 @@
 # I did it without Vue.js.
 
 ![alt text](https://sun9-41.userapi.com/impg/Tv5MeJOp_N5v47kXUbVcOHEuDXt7czAvP6QK4A/ZW_6SF5ofCw.jpg?size=1366x768&quality=96&sign=e02425d77dd693dd9da71ee8a00ad435&type=album) 
+<img width="960" alt="Code_NUl083Ho13" src="https://repository-images.githubusercontent.com/349825660/4a1f1600-9bb1-11eb-9858-5ab48b14a38f">
