@@ -1,6 +1,8 @@
 # Calc Monay
 
-Тестовое задание
+See Demo [there](https://a-p-i-s.github.io/Lend-CryptoCoin-Calculator/).
+
+## Тестовое задание
 по направлению Frontend Developer (стажировка).
 
 Написать SPA - конвертер криптовалют.
